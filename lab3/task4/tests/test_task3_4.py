@@ -20,6 +20,7 @@ class AlgorithmsSortTestCase(unittest.TestCase):
     def test2_should_check_the_search_for_Hirsch_index(self):
         # given
         citations = [10, 8, 5, 4, 3]
+        expect_result = 4
 
         # when
         result, elapsed_time, memory_used = count_time_and_memory(hirsch_index_search, citations)
@@ -27,6 +28,6 @@ class AlgorithmsSortTestCase(unittest.TestCase):
         print(f"Использование памяти: {memory_used:.6f} Кб")
 
         # then
-        self.assertEqual(result, 4)  # проверка результата работы алгоритма
-        self.assertLess(elapsed_time, 2)  # проверка времени выполнения
-        self.assertLess(memory_used, 266144)  # проверка количества используемой памяти
+        self.assertEqual(result, expect_result)
+        self.assertLess(elapsed_time, 2)
+        self.assertLess(memory_used, 266144)
