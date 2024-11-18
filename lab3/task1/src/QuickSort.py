@@ -41,7 +41,7 @@ def Partition3(A, l, r):
 
 
 if __name__ == "__main__":
-    n, A = read_file(file_input_path)
+    n, A = read_file(file_input_path, 0, 0)
     result = ' '.join(map(str, Randomized_QuickSort(A, 0, len(A)-1)))
     if (1 <= n <= 10**4) and all(abs(x) <= 10**9 for x in A):
         write_result(file_output_path, result)

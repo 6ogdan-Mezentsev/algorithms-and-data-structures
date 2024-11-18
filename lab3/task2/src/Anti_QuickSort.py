@@ -21,7 +21,7 @@ def genearte_array(n):
 
 
 if __name__ == "__main__":
-    n = read_file(file_input_path)
+    n = read_file(file_input_path, 0, 0)
     result = ' '.join(map(str, genearte_array(n)))
     if 1 <= n <= 10**6:
         write_result(file_output_path, result)
