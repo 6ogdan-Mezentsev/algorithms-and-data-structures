@@ -1,10 +1,8 @@
-from lab3.utils import read_file
-from lab3.utils import write_result
-from lab3.utils import write_except
+from lab3.utils import read_file, write_result, write_except, print_input, print_output
 import random
 
-file_input_path = '../txtf/input.txt'
-file_output_path = '../txtf/output.txt'
+file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task1/txtf/input.txt'
+file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task1/txtf/output.txt'
 
 
 def Randomized_QuickSort(A, l, r):
@@ -41,11 +39,15 @@ def Partition3(A, l, r):
 
 
 if __name__ == "__main__":
-    n, A = read_file(file_input_path)
+    n, A = read_file(file_input_path, 0, 0)
     result = ' '.join(map(str, Randomized_QuickSort(A, 0, len(A)-1)))
     if (1 <= n <= 10**4) and all(abs(x) <= 10**9 for x in A):
         write_result(file_output_path, result)
     else:
         write_except(file_output_path)
+
+    print("---Lab3 Task1---")
+    print_input(file_input_path)
+    print_output(file_output_path)
 
 

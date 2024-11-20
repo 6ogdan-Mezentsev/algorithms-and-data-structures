@@ -17,3 +17,5 @@ class AlgorithmsSortTestCase(unittest.TestCase):
 
         # then
         self.assertEqual(result, list(range(n, 0, -1)))
+        self.assertLess(elapsed_time, 2)
+        self.assertLess(memory_used, 266144)

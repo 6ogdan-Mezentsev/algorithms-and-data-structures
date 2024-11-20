@@ -19,3 +19,5 @@ class AlgorithmsSortTestCase(unittest.TestCase):
 
         # then
         self.assertEqual(distance_search(3, 1, points), expected_result)
+        self.assertLess(elapsed_time, 2)
+        self.assertLess(memory_used, 266144)

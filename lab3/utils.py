@@ -21,7 +21,6 @@ def read_file(file_input_path, start_line=0, *args):
             return n, A
 
 
-
 def write_result(file_output_path, result):
     outfile = open(file_output_path, 'w').write(result)
 
@@ -51,3 +50,14 @@ def count_time_and_memory(algorithm, *args, **kwargs):
 
     return result, elapsed_time, memory_used
 
+
+def print_input(file_input_path):
+    print("input.txt:")
+    with open(file_input_path, 'r') as f:
+        print(f.read())
+
+
+def print_output(file_output_path):
+    print("output.txt:")
+    with open(file_output_path, 'r') as f:
+        print(f.read())

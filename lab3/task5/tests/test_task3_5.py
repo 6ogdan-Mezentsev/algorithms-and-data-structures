@@ -10,6 +10,7 @@ class AlgorithmsSortTestCase(unittest.TestCase):
         # given
         A = [i for i in range(1, 1001)]
         B = [i for i in range(1001, 2001)]
+        expect_result = 75099133529
 
         # when
         result, elapsed_time, memory_used = count_time_and_memory(sorting_integers, A, B)
@@ -17,4 +18,7 @@ class AlgorithmsSortTestCase(unittest.TestCase):
         print(f"Использование памяти: {memory_used:.6f} Кб")
 
         # then
-        self.assertEqual(result, 75099133529)
+        self.assertEqual(result, expect_result)
+        self.assertLess(elapsed_time, 2)
+        self.assertLess(memory_used, 266144)
+

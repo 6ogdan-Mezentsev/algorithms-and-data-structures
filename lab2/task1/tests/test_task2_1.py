@@ -17,3 +17,5 @@ class AlgorithmsSortTestCase(unittest.TestCase):
         print(f"Использование памяти: {memory_used:.6f} Кб")
 
         self.assertEqual(result, sorted(A))
+        self.assertLess(elapsed_time, 2)
+        self.assertLess(memory_used, 266144)
