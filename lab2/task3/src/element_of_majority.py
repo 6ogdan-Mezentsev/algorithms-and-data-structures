@@ -1,10 +1,7 @@
-# Задача 5
-from lab2.utils import read_file
-from lab2.utils import write_result
-from lab2.utils import write_except
+from lab2.utils import read_file, write_result, write_except, print_input, print_output
 
-file_input_path = '../txtf/input.txt'
-file_output_path = '../txtf/output.txt'
+file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab2/task3/txtf/input.txt'
+file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab2/task3/txtf/output.txt'
 
 
 def element_of_majority(A):
@@ -24,5 +21,9 @@ if __name__ == "__main__":
         write_result(file_output_path, result)
     else:
         write_except(file_output_path)
+
+    print("---Lab2 Task3---")
+    print_input(file_input_path)
+    print_output(file_output_path)
 
 

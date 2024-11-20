@@ -1,10 +1,8 @@
-from lab3.utils import read_file
-from lab3.utils import write_result
-from lab3.utils import write_except
+from lab3.utils import read_file, write_result, write_except, print_input, print_output
 from lab3.task1.src.QuickSort import Randomized_QuickSort, Partition3
 
-file_input_path = '../txtf/input.txt'
-file_output_path = '../txtf/output.txt'
+file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task5/txtf/input.txt'
+file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task5/txtf/output.txt'
 
 
 def sorting_integers(A, B):
@@ -24,3 +22,7 @@ if __name__ == "__main__":
         write_result(file_output_path, result)
     else:
         write_except(file_output_path)
+
+    print("---Lab3 Task5---")
+    print_input(file_input_path)
+    print_output(file_output_path)

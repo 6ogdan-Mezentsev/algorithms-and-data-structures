@@ -1,9 +1,7 @@
-from lab3.utils import read_file
-from lab3.utils import write_result
-from lab3.utils import write_except
+from lab3.utils import read_file, write_result, write_except, print_input, print_output
 
-file_input_path = '../txtf/input.txt'
-file_output_path = '../txtf/output.txt'
+file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task6/txtf/input.txt'
+file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task6/txtf/output.txt'
 
 
 def distance_search(n, k, points):
@@ -26,5 +24,9 @@ if __name__ == "__main__":
     result = ' '.join(map(str, distance_search(n, k, points)))
 
     write_result(file_output_path, result)
+
+    print("---Lab3 Task6---")
+    print_input(file_input_path)
+    print_output(file_output_path)
 
 
