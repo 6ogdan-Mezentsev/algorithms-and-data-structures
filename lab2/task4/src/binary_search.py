@@ -1,8 +1,9 @@
 from lab2.utils import read_file, write_result, write_except, print_input, print_output
 import os
 
-file_input_path = os.path.abspath("../txtf/input.txt")
-file_output_path = os.path.abspath("../txtf/output.txt")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_input_path = os.path.join(script_dir, "../txtf/input.txt")
+file_output_path = os.path.join(script_dir, "../txtf/output.txt")
 
 
 def binary_search(value, lst):
