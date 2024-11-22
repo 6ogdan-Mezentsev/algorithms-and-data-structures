@@ -2,8 +2,9 @@ from lab3.utils import read_file, write_result, write_except, print_input, print
 import random
 import os
 
-file_input_path = os.path.abspath("../txtf/input.txt")
-file_output_path = os.path.abspath("../txtf/output.txt")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_input_path = os.path.join(script_dir, "../txtf/input.txt")
+file_output_path = os.path.join(script_dir, "../txtf/output.txt")
 
 
 def Randomized_QuickSort(A, l, r):
