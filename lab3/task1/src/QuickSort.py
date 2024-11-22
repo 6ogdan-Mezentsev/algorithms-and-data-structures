@@ -1,8 +1,9 @@
 from lab3.utils import read_file, write_result, write_except, print_input, print_output
 import random
+import os
 
-file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task1/txtf/input.txt'
-file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task1/txtf/output.txt'
+file_input_path = os.path.abspath("../txtf/input.txt")
+file_output_path = os.path.abspath("../txtf/output.txt")
 
 
 def Randomized_QuickSort(A, l, r):

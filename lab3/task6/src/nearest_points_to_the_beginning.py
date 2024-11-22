@@ -1,7 +1,8 @@
 from lab3.utils import read_file, write_result, write_except, print_input, print_output
+import os
 
-file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task6/txtf/input.txt'
-file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab3/task6/txtf/output.txt'
+file_input_path = os.path.abspath("../txtf/input.txt")
+file_output_path = os.path.abspath("../txtf/output.txt")
 
 
 def distance_search(n, k, points):
