@@ -27,8 +27,6 @@ class AlgorithmsStackTestCase(unittest.TestCase):
 
         # when
         result, elapsed_time, memory_used = count_time_and_memory(check_correct_pairs, sequence)
-        print(f"\nВремя работы алгоритма_3: {elapsed_time:.6f} секунд")
-        print(f"Использование памяти: {memory_used:.6f} Кб")
 
         # then
         self.assertEqual(result, expected_result)
