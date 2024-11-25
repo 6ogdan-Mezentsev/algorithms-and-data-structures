@@ -9,38 +9,51 @@ class TestStack(unittest.TestCase):
 
     def test_isEmpty(self):
         """Тест метода isEmpty"""
-
-        self.assertEqual(self.stack.isEmpty(), True)
+        # given
+        expected_result1 = True
+        expected_result2 = False
+        # when
+        self.assertEqual(self.stack.isEmpty(), expected_result1)
         self.stack.push(1)
-        self.assertFalse(self.stack.isEmpty(), False)
+        # then
+        self.assertFalse(self.stack.isEmpty(), expected_result2)
 
     def test_Push(self):
         """Тест метода Push"""
+        # when
         self.stack.push(1)
         self.assertEqual(self.stack.top.value, 1)
         self.stack.push(2)
+        # then
         self.assertEqual(self.stack.top.value, 2)
         self.assertEqual(self.stack.top.next.value, 1)
 
     def test_Pop(self):
         """Тест метода Pop"""
+        # given
         self.stack.push(1)
         self.stack.push(2)
         self.stack.push(3)
+        # when
         popped_value = self.stack.pop()
         self.assertEqual(popped_value, 3)
         self.assertEqual(self.stack.top.value, 2)
         popped_value = self.stack.pop()
+        # then
         self.assertEqual(popped_value, 2)
         self.assertEqual(self.stack.top.value, 1)
 
     def test_display_stack(self):
         """Тест метода display_stack"""
+        # given
+        expected_result = "3, 2, 1"
+        # when
         self.stack.push(1)
         self.stack.push(2)
         self.stack.push(3)
         display_stack = self.stack.display_stack()
-        self.assertEqual(display_stack, "3, 2, 1")
+        # then
+        self.assertEqual(display_stack, expected_result)
 
 
 
