@@ -17,7 +17,7 @@
     git clone https://github.com/username/repository-name.git
 2. Запуск всех src из lab3:
     ```bash
-    find lab3/task*/src/ -name "*.py" -exec python3 {} \;
+    PYTHONPATH=. find lab3/task*/src/ -name "*.py" -exec python3 {} \;
 3. Запуск всех тестов для алгоритмов:
     ```bash
     python3 -m pytest -v lab3/task*/tests/*.py

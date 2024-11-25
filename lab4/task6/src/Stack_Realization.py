@@ -35,7 +35,7 @@ class Stack:
         while current_top:  # Пока не закончатся все узлы, будем добавлять их в список
             elements.append(current_top.value)
             current_top = current_top.next  # Меняем указатель верхеного элемента на следующий узел
-        print(", ".join(map(str, elements)))
+        return ", ".join(map(str, elements))
 
 
 if __name__ == "__main__":
@@ -46,9 +46,9 @@ if __name__ == "__main__":
     stack.push(1)
     stack.push(2)
     stack.push(3)
-    stack.display_stack()
+    print(stack.display_stack())
     stack.pop()
-    stack.display_stack()
+    print(stack.display_stack())
     stack.pop()
-    stack.display_stack()
+    print(stack.display_stack())
     print(stack.isEmpty())

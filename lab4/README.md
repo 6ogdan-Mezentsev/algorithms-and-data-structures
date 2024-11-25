@@ -15,9 +15,9 @@
 1. Клонируйте репозиторий:
     ```bash
     git clone https://github.com/username/repository-name.git
-2. Запуск всех src из lab3:
+2. Запуск всех src из lab4:
     ```bash
-    find lab4/task*/src/ -name "*.py" -exec python3 {} \;
+    PYTHONPATH=. find lab4/task*/src/ -name "*.py" -exec python3 {} \;
 3. Запуск всех тестов для алгоритмов:
     ```bash
     python3 -m pytest -v lab4/task*/tests/*.py

@@ -52,7 +52,7 @@ class Queue:
             elements.append(current_first.value)
             current_first = current_first.next
 
-        return print(", ".join(map(str, elements)))
+        return ", ".join(map(str, elements))
 
 
 if __name__ == "__main__":
@@ -60,15 +60,15 @@ if __name__ == "__main__":
     queue = Queue(3)
 
     queue.enQueue(1)
-    queue.display_queue()
+    print(queue.display_queue())
     queue.enQueue(2)
-    queue.display_queue()
+    print(queue.display_queue())
     queue.enQueue(3)
-    queue.display_queue()
+    print(queue.display_queue())
     queue.deQueue()
-    queue.display_queue()
+    print(queue.display_queue())
     queue.deQueue()
-    queue.display_queue()
+    print(queue.display_queue())
 
 
 
