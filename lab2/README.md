@@ -11,24 +11,13 @@
 [Задача 4 - Бинарный поиск](task4/README.md)\
 [Задача 10 - 10 задача*](task5/README.md)
 
-## Структура проекта
-- `task1/` - 1 задача
-  - `src/` - код алгоритма
-  - `txtf/` - файлы с входными и выходными данными
-  - `tests.py` - модульные тесты для проверки работы кода
-  - `README.md` - описание задачи
-- `task2/` - 2 задача
-- `task3/` - 3 задача
-- `README.md` - описание лабораторной работы
-- `отчёт.pdf` - отчёт по ЛР
-
 ## Запуск проекта и тестирование
 1. Клонируйте репозиторий:
     ```bash
     git clone https://github.com/username/repository-name.git
 2. Запуск всех src из lab2:
     ```bash
-    find lab2/task*/src/ -name "*.py" -exec python3 {} \;
+    PYTHONPATH=. find lab2/task*/src/ -name "*.py" -exec python3 {} \;
 3. Запуск всех тестов для алгоритмов:
     ```bash
     python3 -m pytest -v lab2/task*/tests/*.py

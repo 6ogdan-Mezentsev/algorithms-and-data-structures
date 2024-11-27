@@ -11,24 +11,13 @@
 [Задача 6 - Сортировка целых чисел](task5/README.md)\
 [Задача 8 - K ближайших точек к началу координат](task6/README.md)
 
-## Структура проекта
-- `task1/` - 1 задача
-  - `src/` - исходный код алгоритма
-  - `txtf/` - файлы с входными и выходными данными
-  - `README.md` - описание задачи
-  - `tests.py` - модульные тесты для проверки работы кода
-- `task2/` - 2 задача
-- `task3/` - 3 задача
-- `README.md` - описание лабораторной работы
-- `отчёт.pdf` - отчёт по ЛР
-
 ## Запуск проекта и тестирование
 1. Клонируйте репозиторий:
     ```bash
     git clone https://github.com/username/repository-name.git
 2. Запуск всех src из lab3:
     ```bash
-    find lab3/task*/src/ -name "*.py" -exec python3 {} \;
+    PYTHONPATH=. find lab3/task*/src/ -name "*.py" -exec python3 {} \;
 3. Запуск всех тестов для алгоритмов:
     ```bash
     python3 -m pytest -v lab3/task*/tests/*.py

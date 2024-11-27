@@ -1,7 +1,9 @@
 from lab2.utils import read_file, write_result, write_except, print_input, print_output
+import os
 
-file_input_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab2/task2/txtf/input.txt'
-file_output_path = '/Users/6ogdanmezentsev/PycharmProjects/algorithms-and-data-structures/lab2/task2/txtf/output.txt'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_input_path = os.path.join(script_dir, "../txtf/input.txt")
+file_output_path = os.path.join(script_dir, "../txtf/output.txt")
 
 
 def merge_sort_and_count(A, n):
