@@ -60,15 +60,16 @@ if __name__ == "__main__":
     queue = Queue(3)
 
     queue.enQueue(1)
-    print(queue.display_queue())
+    print(f"В очередь добавлен элемент '1': {queue.display_queue()}")
     queue.enQueue(2)
-    print(queue.display_queue())
+    print(f"В очередь добавлен элемент '2': {queue.display_queue()}")
     queue.enQueue(3)
-    print(queue.display_queue())
+    print(f"В очередь добавлен элемент '3': {queue.display_queue()}")
     queue.deQueue()
-    print(queue.display_queue())
+    print(f"Из очереди удалён элемент '1': {queue.display_queue()}")
     queue.deQueue()
-    print(queue.display_queue())
+    print(f"Из очереди удалён элемент '2': {queue.display_queue()}")
+
 
 
 

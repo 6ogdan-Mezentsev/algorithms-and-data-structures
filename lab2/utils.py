@@ -49,7 +49,7 @@ def print_output(file_output_path):
     print("output.txt:")
     with open(file_output_path, 'r') as f:
         print(f.read())
-
+        print()
 
 
 
