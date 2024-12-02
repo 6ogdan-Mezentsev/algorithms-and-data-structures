@@ -1,9 +1,9 @@
 from lab5.utils import read_file, write_except, print_input, print_output
 import os
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-file_input_path = os.path.join(script_dir, "../txtf/input.txt")
-file_output_path = os.path.join(script_dir, "../txtf/output.txt")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_INPUT_PATH = os.path.join(SCRIPT_DIR, "../txtf/input.txt")
+FILE_OUTPUT_PATH = os.path.join(SCRIPT_DIR, "../txtf/output.txt")
 
 
 def create_heap(n, A):
@@ -33,16 +33,16 @@ def create_heap(n, A):
 
 
 if __name__ == "__main__":
-    n, A = read_file(file_input_path)
+    n, A = read_file(FILE_INPUT_PATH)
     if (1 <= n <= 10 ** 5) and all(abs(x) <= 10 ** 9 for x in A):
         swaps = create_heap(n, A)
-        with open(file_output_path, "w") as f:
+        with open(FILE_OUTPUT_PATH, "w") as f:
             f.write(f"{len(swaps)}\n")
             for i, j in swaps:
                 f.write(f"{i} {j}\n")
     else:
-        write_except(file_output_path)
+        write_except(FILE_OUTPUT_PATH)
 
     print("---Lab5 Task3---")
-    print_input(file_input_path)
-    print_output(file_output_path)
+    print_input(FILE_INPUT_PATH)
+    print_output(FILE_OUTPUT_PATH)

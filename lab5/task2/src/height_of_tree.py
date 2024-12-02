@@ -2,9 +2,9 @@ from lab5.utils import read_file, write_result, write_except, print_input, print
 from collections import deque
 import os
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-file_input_path = os.path.join(script_dir, "../txtf/input.txt")
-file_output_path = os.path.join(script_dir, "../txtf/output.txt")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_INPUT_PATH = os.path.join(SCRIPT_DIR, "../txtf/input.txt")
+FILE_OUTPUT_PATH = os.path.join(SCRIPT_DIR, "../txtf/output.txt")
 
 
 def hight_of_tree(n, parents):
@@ -32,10 +32,10 @@ def hight_of_tree(n, parents):
 
 
 if __name__ == "__main__":
-    n, parents = read_file(file_input_path)
+    n, parents = read_file(FILE_INPUT_PATH)
     result = hight_of_tree(n, parents)
-    write_result(file_output_path, result)
+    write_result(FILE_OUTPUT_PATH, result)
 
     print("---Lab5 Task2---")
-    print_input(file_input_path)
-    print_output(file_output_path)
+    print_input(FILE_INPUT_PATH)
+    print_output(FILE_OUTPUT_PATH)

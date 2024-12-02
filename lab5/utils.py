@@ -2,20 +2,20 @@ import time
 from memory_profiler import memory_usage
 
 
-def read_file(file_input_path, start_line=0):
-    with open(file_input_path, 'r') as file:
+def read_file(FILE_INPUT_PATH, start_line=0):
+    with open(FILE_INPUT_PATH, 'r') as file:
             lines = file.readlines()
             n = int(lines[start_line].strip())
             A = [int(num) for num in lines[start_line + 1].strip().split()]
             return n, A
 
 
-def write_result(file_output_path, result):
-    outfile = open(file_output_path, 'w').write(result)
+def write_result(FILE_OUTPUT_PATH, result):
+    outfile = open(FILE_OUTPUT_PATH, 'w').write(result)
 
 
-def write_except(file_output_path):
-    outfile = open(file_output_path, 'w').write("Проверьте корректность введённых данных")
+def write_except(FILE_OUTPUT_PATH):
+    outfile = open(FILE_OUTPUT_PATH, 'w').write("Проверьте корректность введённых данных")
 
 
 def count_time_and_memory(algorithm, *args, **kwargs):
@@ -31,20 +31,14 @@ def count_time_and_memory(algorithm, *args, **kwargs):
     return result, elapsed_time, memory_used
 
 
-def print_input(file_input_path):
+def print_input(FILE_INPUT_PATH):
     print("input.txt:")
-    with open(file_input_path, 'r') as f:
+    with open(FILE_INPUT_PATH, 'r') as f:
         print(f.read())
 
 
-def print_output(file_output_path):
+def print_output(FILE_OUTPUT_PATH):
     print("output.txt:")
-    with open(file_output_path, 'r') as f:
+    with open(FILE_OUTPUT_PATH, 'r') as f:
         print(f.read())
         print()
-
-
-
-
-
-
