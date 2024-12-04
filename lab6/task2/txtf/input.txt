@@ -1,0 +1,9 @@
+8
+add 1234567 Kate
+add 7654321 Petter
+find 1234567
+find 2345678
+add 1234567 Charlie
+find 1234567
+del 1234567
+find 1234567
