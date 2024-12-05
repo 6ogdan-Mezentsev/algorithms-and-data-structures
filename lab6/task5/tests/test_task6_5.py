@@ -5,7 +5,7 @@ from lab6.task5.src.hash_table import hash_table
 
 class AlgorithmTestCase(unittest.TestCase):
 
-    def test_should_check_success_fibonacci(self):
+    def test_should_check_success_hash_table(self):
         # given
         N = 10
         X = 1

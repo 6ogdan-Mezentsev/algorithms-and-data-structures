@@ -52,5 +52,4 @@ def print_input(FILE_INPUT_PATH):
 def print_output(FILE_OUTPUT_PATH):
     print("output.txt:")
     with open(FILE_OUTPUT_PATH, 'r') as f:
-        print(f.read())
-        print()
+        print(f"{f.read()}\n")
