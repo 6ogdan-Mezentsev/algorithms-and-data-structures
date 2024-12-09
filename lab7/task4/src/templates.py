@@ -31,6 +31,6 @@ if __name__ == "__main__":
     pattern, A = read_file(FILE_INPUT_PATH, start_line=0, task='task4')
     write_result(FILE_OUTPUT_PATH, check_template(pattern, A))
 
-    print("---Lab7 Task3---")
+    print("---Lab7 Task4---")
     print_input(FILE_INPUT_PATH)
     print_output(FILE_OUTPUT_PATH)
